@@ -57,7 +57,6 @@ struct Chapter2View: View {
                         .padding(.horizontal)
                         
                     })
-                    
                 }
                 
                 ScrollView {
