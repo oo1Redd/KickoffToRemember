@@ -35,28 +35,28 @@ struct Chapter2View: View {
 //                }
                 
                 HStack {
-                    Button(action: {
-                        self.title = "Butt #3"
-                    }, label: {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 25))
-                        .padding(.horizontal)
-//
-                    })
-                    Spacer()
+//                    Button(action: {
+//                        self.title = "Butt #3"
+//                    }, label: {
+//                    Image(systemName: "chevron.left")
+//                        .font(.system(size: 25))
+//                        .padding(.horizontal)
+////
+//                    })
+//                    Spacer()
                     
                     Text("Chapter 2")
                         .font(.largeTitle)
-                        Spacer()
+//                        Spacer()
                       
-                    Button(action: {
-                        self.title = "Butt #4"
-                    }, label: {
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 25))
-                        .padding(.horizontal)
-                        
-                    })
+//                    Button(action: {
+//                        self.title = "Butt #4"
+//                    }, label: {
+//                    Image(systemName: "chevron.right")
+//                        .font(.system(size: 25))
+//                        .padding(.horizontal)
+//                        
+//                    })
                 }
                 
                 ScrollView {
