@@ -1,11 +1,179 @@
 import SwiftUI
 
 struct Chapter1View: View {
+    let family = ["Kevin", "Marsha", "David"]
     var body: some View {
-        Text("Chapter 1")
+        ScrollView {
+            VStack {
+                Text("Chapter One")
+                    .padding()
+                    .padding()
+                    .bold()
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                    .padding()
+                    Text("A DAY FOR A SON")
+                        .bold()
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.black)
+                    Image(systemName: "sparkles")
+                    Divider()
+                    Text("As \(family[0]) wakes up he looks at the clock he notices its 9:40 in the morning.")
+                        .padding()
+                        .bold()
+                        .foregroundColor(.white)
+                        .font(.title)
+                    Text("He leans up stretches in the bed and he can smell pancakes, eggs, and bacon cooking in the kitchen.")
+                        .bold()
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    Group {
+                        HStack {
+                            Text("He thinks to himself it must be his wife \(family[1]) cooking breakfast.")
+                                .padding()
+                                .bold()
+                                .foregroundColor(.white)
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .padding()
+                            Image("EarlyMorningStretch")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(20)
+                            
+                        }
+                    }
+                    Group {
+                        Divider()
+                        Text("\(family[0]) gets up and walks into the bathroom washes his face and brushes his teeth before getting in the shower.")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    }
+                    Divider()
+                    HStack {
+                        Text("He starts to think of memories of his father!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                        Image("bathroomTrip")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(20)
+                    }
+                    Group {
+                        Divider()
+                        Text("\(family[0]) and his father were not close, so he was trying to remember what he wanted to do as a kid, but never got the chance too!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                        Text("\(family[0]) grew up in Philadelphia and his father raised him on his own, because his mother passed away when he was very young.")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                        Text("\"I want to give my son a day I was never able to get from my father!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                        Text("He says after he finshes freshening up in the mirror. As he walks out the bathroom he hears his wife yelling!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                        Text("\"Kevin and David come eat!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                    Divider()
+                    HStack {
+                        Text("Before \(family[2]) could enter the kitchen \(family[1]) pulls \(family[0]) to the side!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .padding()
+                        Image("breakfastLife")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(20)
+                    }
+                    Group {
+                        Divider()
+                        Text("\"Guess what my co-worker gave me tickets to the Eagles vs. Commanders game you should take David!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\(family[0]) replied!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\"Thanks that's perfect I was just planning on spending the day with him!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("Soon after \(family[2]) walks in.")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\"I'm hungry as a hostage thanks ma!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\(family[0]) smiles and says.")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\"Boy you always hungry after you eat get yourself together we going to the football game!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\(family[2]) barely swallowing his food yells with exctement!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Text("\"I can't wait!!\"")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
+                        Image("game")
+                            .resizable()
+                            .cornerRadius(20)
+                        Text("Before they leave the house...")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    }
+                }
+            }
+            .padding()
+            .scaledToFill()
+            .background(.brown)
+            
+        }
+        
     }
-}
+    #Preview {
+        Chapter1View()
+    }
+    
+    
+    
 
-#Preview {
-    Chapter1View()
-}
