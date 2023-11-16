@@ -2,7 +2,27 @@ import SwiftUI
 
 // Use the relevant folders and swift files to code your chapter of the story. Keep ContentView as-is, unless you want a different type of navigation in your story.
 struct ContentView: View {
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
+       Spacer()
+        .navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem(placement: 
+                    .navigationBarLeading){
+            
+                Button(action: {
+                    presentationMode.wrappedValue
+                        .dismiss()
+                }, label: {
+                    Image(systemName: "book.closed.fill")
+                        .foregroundColor(.blue)
+                        Text("Cover")
+                        .foregroundColor(.blue)
+                })
+            }
+        })
+        
         TabView {
             Chapter1View()
                 .tabItem {

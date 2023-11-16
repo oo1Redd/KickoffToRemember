@@ -10,27 +10,53 @@
 import SwiftUI
 
 struct Chapter2View: View {
+    
+    @State var title: String = "This is My Title"
+    
     var body: some View {
 
         
         ZStack {
             
             VStack {
+//                HStack {
+//                    Image(systemName: "chevron.left")
+//                        .font(.system(size: 25))
+//                        .padding(.horizontal)
+//                        Spacer()
+//                    
+//                    Text("Chapter 2")
+//                        .font(.largeTitle)
+//                        Spacer()
+//                      
+//                    Image(systemName: "chevron.right")
+//                        .font(.system(size: 25))
+//                        .padding(.horizontal)
+//                }
+                
                 HStack {
+                    Button(action: {
+                        self.title = "Butt #3"
+                    }, label: {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 25))
                         .padding(.horizontal)
-                        Spacer()
+//
+                    })
+                    Spacer()
                     
                     Text("Chapter 2")
                         .font(.largeTitle)
                         Spacer()
                       
+                    Button(action: {
+                        self.title = "Butt #4"
+                    }, label: {
                     Image(systemName: "chevron.right")
                         .font(.system(size: 25))
                         .padding(.horizontal)
-                    
-                    
+                        
+                    })
                     
                 }
                 
@@ -82,6 +108,7 @@ struct Chapter2View: View {
             }
             
         }
+        
     }
 }
 #Preview {
