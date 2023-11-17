@@ -8,11 +8,34 @@
 //leaping high into the air, he came down with a miraculous one handed catch AJ Brown was in for the touchdown. EAGLES WIN! final score Eagles: 23 to the Commanders: 20. The stadium erupted as Kevin and David hugged tightly, jumping up and down with joy. David would never forget this moment – the thrill of the last-second win, the shared joy with his father, and the unforgettable day they spent together.
 
 import SwiftUI
+import AVKit
+
+class SoundManger: Observable {
+    
+    static let instance = SoundManger()
+    
+    var player: AVAudioPlayer?
+    
+    func playsound() {
+        
+        guard  let url = Bundle.main.url(forResource: "crowdCheering", withExtension: ".mp3") else { return}
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print("error play souind. \(error.localizedDescription)")
+        }
+    }
+}
+    
+
 
 struct Chapter2View: View {
     
     @State private var title: String = "This is My Title"
     @State private var showImages: Bool = true
+
     
     var body: some View {
 
@@ -20,6 +43,7 @@ struct Chapter2View: View {
         ZStack {
             
             VStack {
+               
 //                HStack {
 //                    Image(systemName: "chevron.left")
 //                        .font(.system(size: 25))
@@ -110,6 +134,10 @@ struct Chapter2View: View {
                             .resizable()
                             .scaledToFit()
                             .padding()
+                        
+                        Button("Play sound"){
+                            SoundManger.instance.playsound()
+                        }
                         
                     }
                     
