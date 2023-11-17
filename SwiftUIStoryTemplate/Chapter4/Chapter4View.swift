@@ -50,6 +50,7 @@ struct Chapter4View: View {
                             startTicker()
                         }
                 }
+                
 
                 NavigationLink(destination: Chapter5View()) {
                     Image(systemName: "chevron.right")
